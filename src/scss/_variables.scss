@@ -1,0 +1,21 @@
+$primary-color: #fbcd3c;
+$secondary-color: #333333;
+$lightenSecondary: lighten($secondary-color, 50);
+$light: #eeeeee;
+$sidebarWidth: 250px;
+$wrapperWidth: 90%;
+$wrapperMarginLeft: calc(100vw - (100vw + 5vw));
+
+//BREAKPOINTS
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
