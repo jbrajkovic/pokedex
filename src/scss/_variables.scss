@@ -5,6 +5,12 @@ $light: #eeeeee;
 $sidebarWidth: 250px;
 $wrapperWidth: 90%;
 $wrapperMarginLeft: calc(100vw - (100vw + 5vw));
+$pokemonCardWidth: 170px;
+$cardDiagonal: calc(#{$pokemonCardWidth} * 1.4142135623730950488);
+$cardContentMarginFix: calc((#{$pokemonCardWidth} - #{$cardDiagonal}) / 2);
+$cardHeaderSize: calc((20 / 100) * #{$cardDiagonal});
+$cardBodySize: calc((48 / 100) * #{$cardDiagonal});
+$cardBottomSize: calc((32 / 100) * #{$cardDiagonal});
 
 //BREAKPOINTS
 
@@ -18,4 +24,4 @@ $screen-md-min: 768px;
 $screen-lg-min: 992px;
 
 // Large tablets and desktops
-$screen-xl-min: 1200px;
+$screen-xl-min: 1250px;

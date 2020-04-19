@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!getSinglePokemonLoader" class="single-pokemon">
+  <div v-if="!getSinglePokemonLoader" class="single-pokemon wrapper">
     <div class="single-pokemon-top-options py-20 d-flex flex-between">
       <v-icon name="reply" scale="2" @click="$router.go(-1)" />
       <p class="single-pokemon-id">#{{getSinglePokemonId}}</p>
@@ -12,9 +12,9 @@
     </div>
 
     <div class="single-pokemon-top-navigation mb-20 d-flex flex-between">
-      <small class="w-70 text-left" @click="previous(getSinglePokemonId)">&lt;&lt; Prev</small>
+      <small :class="{hidden: getSinglePokemonId === 1}" class="w-70 text-left" @click="previous(getSinglePokemonId)">&lt;&lt; Prev</small>
       <h2 class="single-pokemon-name capitalize text-center">{{getSinglePokemonName}}</h2>
-      <small class="w-70 text-right" @click="next(getSinglePokemonId)">Next &gt;&gt;</small>
+      <small :class="{hidden: getSinglePokemonId === 807}" class="w-70 text-right" @click="next(getSinglePokemonId)">Next &gt;&gt;</small>
     </div>
 
     <div class="single-pokemon-image p-20 d-flex flex-center" :style="{background: typeColor}">

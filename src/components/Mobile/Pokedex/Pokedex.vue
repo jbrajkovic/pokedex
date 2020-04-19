@@ -8,13 +8,16 @@
     
     <Observer @Intersect="loadMore" />
   </div>
-  <div v-else class="home-loader"></div>
+  <div v-else class="home-loader d-flex flex-center">
+    <h1>POKEDEX</h1>
+  </div>
 </template>
 
 <script>
 import PokedexCard from "@/components/Mobile/Pokedex/PokedexCard.vue";
 import Observer from "@/components/Mobile/Observer/Observer.vue";
 import Spinner from "@/components/Mobile/Loader/Spinner.vue";
+
 import { mapActions, mapGetters } from "vuex";
 
 export default {
@@ -38,13 +41,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../scss/variables.scss';
+
 .home-loader {
   width: 100%;
   height: 100vh;
-  background: url("../../../assets/pokedexapp1-01.jpg") no-repeat;
+  /* background: url("../../../assets/pokedexapp1-01.jpg") no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   position: absolute;
+  background: $primary-color;
+  color: #ffffff;
+  font-weight: bold;
   top: 0;
   left: 0;
 }

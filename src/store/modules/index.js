@@ -1,3 +1,5 @@
+//MODULES AUTO INJECTOR
+
 const requireModule = require.context(".", false, /\.store\.js$/);
 const modules = {};
 

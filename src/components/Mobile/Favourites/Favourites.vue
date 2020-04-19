@@ -1,5 +1,5 @@
 <template>
-  <div v-if="true">
+  <div>
     <Subheader :title="'Favourites'" />
     <div v-if="getFavourites.length" class="favourite-pokemons wrapper py-20">
       <div
@@ -14,12 +14,10 @@
       </div>
     </div>
     <div v-else class="empty-favourites wrapper py-20 text-center">
-        <v-icon name="regular/star" scale="3.3"/>
-        <p class="empty-message mt-10">You didn't choose your favourite pokemons</p>
-      </div>
+      <v-icon name="regular/star" scale="3.3" />
+      <p class="empty-message mt-10">You didn't choose your favourite pokemons</p>
+    </div>
   </div>
-
-  <div v-else>Loading...</div>
 </template>
 
 <script>

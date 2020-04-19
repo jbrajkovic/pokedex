@@ -43,6 +43,7 @@ export default {};
   background: #ffffff;
   font-size: 23px;
   z-index: 99;
+  overflow-y: auto;
 
   &-logo {
     img {

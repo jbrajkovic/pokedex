@@ -6,10 +6,10 @@
       <v-icon name="search" scale="1.5" @click="showSearch = !showSearch" />
     </div>
     <transition name="slide">
-      <Sidemenu v-if="showSideMenu" />
+      <Sidemenu v-show="showSideMenu" />
     </transition>
 
-    <div v-if="showSideMenu" class="sidemenu-backdrop" @click.self="showSideMenu = false"></div>
+    <div v-show="showSideMenu" class="sidemenu-backdrop" @click.self="showSideMenu = false"></div>
 
     <transition name="slide-up">
       <Search v-if="showSearch" @closeSearch="showSearch = false" />

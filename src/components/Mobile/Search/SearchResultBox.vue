@@ -24,5 +24,6 @@ export default {
 .search-result-box {
   background: #ffffff;
   color: #111111;
+  cursor: pointer;
 }
 </style>

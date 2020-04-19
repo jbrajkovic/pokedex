@@ -1,6 +1,12 @@
 import { IMG_BASE_URL } from "./constants";
+import { isMobile } from "mobile-device-detect";
 
 export default {
+  computed: {
+    isMobile() {
+      return isMobile;
+    },
+  },
   methods: {
     fetchImg(id) {
       if (!id) return false;
@@ -32,6 +38,12 @@ export default {
       return typeColors[type]["color"];
     },
 
+    getTypeDarkenBackground(type) {
+      let typeColors = this.$store.state.Colors.typeColors;
+
+      return typeColors[type]["darkColor"];
+    },
+
     isFavourite(id) {
       return this.getFavourites.some((favourite) => {
         return favourite.id === id;
@@ -42,6 +54,6 @@ export default {
       this.isFavourite(pokemon.id)
         ? this.removeFromFavourites(pokemon)
         : this.addToFavourites(pokemon);
-    }
+    },
   },
 };

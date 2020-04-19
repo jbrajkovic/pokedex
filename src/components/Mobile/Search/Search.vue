@@ -84,6 +84,7 @@ export default {
   padding: 20px;
   text-align: center;
   color: #ffffff;
+  overflow-y: auto;
 
   &-top h1 {
     font-size: 28px;

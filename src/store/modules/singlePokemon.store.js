@@ -92,7 +92,7 @@ const mutations = {
       const { name, effect_entries } = ability;
 
       abilities.push({
-        name: name,
+        name,
         description: effect_entries[0].short_effect,
       });
 

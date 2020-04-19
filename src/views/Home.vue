@@ -1,26 +1,21 @@
 <template>
-  <div v-if="mobile" class="home">
+  <div v-if="isMobile" class="home">
     <Pokedex />
   </div>
   <div v-else class="home-desktop">
-    HOME
+    <PokedexDesktop />
   </div>
 </template>
 
 <script>
 import Pokedex from "@/components/Mobile/Pokedex/Pokedex.vue";
-import { isMobile } from 'mobile-device-detect';
-
+import PokedexDesktop from "@/components/Desktop/Pokedex/Pokedex.vue";
 
 export default {
   name: "Home",
   components: {
-    Pokedex
-  },
-  computed: {
-    mobile() {
-      return isMobile
-    }
+    Pokedex,
+    PokedexDesktop
   }
 };
 </script>

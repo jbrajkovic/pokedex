@@ -1,8 +1,16 @@
 @import "variables";
+@import "mixin";
 
 .wrapper {
   width: $wrapperWidth;
   margin: 0 auto;
+
+  @include xl {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+  }
 }
 
 .hidden {
@@ -15,6 +23,10 @@
 
 .green {
   color: green;
+}
+
+.bg-primary {
+  background-color: $primary-color;
 }
 
 .d-block {
@@ -131,6 +143,10 @@
 
 .mr-3 {
   margin-right: 3px;
+}
+
+.mr-50 {
+  margin-right: 50px;
 }
 
 .mx-3 {
@@ -293,10 +309,19 @@
   align-items: center;
 }
 
+.flex-around {
+  justify-content: space-around;
+  align-items: center;
+}
+
 //---------- BORDERS ---------- //
 
 .border {
   border: 1px solid $secondary-color;
+}
+
+.border-none {
+  border: none;
 }
 
 .border-bottom {

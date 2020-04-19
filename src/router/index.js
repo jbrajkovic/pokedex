@@ -51,10 +51,21 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior(savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
 });
 
 router.beforeEach((to, from, next) => {
-  if (to.fullPath !== "/" && !store.getters.getPokemons.length) {
+  if (
+    to.fullPath !== "/" &&
+    (!store.getters.getPokemons.length &&
+      !store.getters.getFilteredPokemons.length)
+  ) {
     next({ path: "/" });
   }
 
