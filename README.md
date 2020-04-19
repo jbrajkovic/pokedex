@@ -2,9 +2,7 @@
 
 ## Demo Link
 
-```
-[Demo](https://practical-wozniak-655912.netlify.app)
-```
+App link is [here](https://practical-wozniak-655912.netlify.app)
 
 ## Project setup
 ```
