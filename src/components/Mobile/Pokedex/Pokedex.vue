@@ -53,7 +53,7 @@ export default {
   background: $primary-color;
   color: #333333;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   top: 0;
   left: 0;
 }
