@@ -1,4 +1,4 @@
-# pokedex2
+# Pokedex PWA for Blabladev
 
 ## Project setup
 ```
