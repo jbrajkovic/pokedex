@@ -51,8 +51,9 @@ export default {
   background-size: cover; */
   position: absolute;
   background: $primary-color;
-  color: #ffffff;
+  color: #333333;
   font-weight: bold;
+  font-size: 25px;
   top: 0;
   left: 0;
 }
